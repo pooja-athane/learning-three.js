@@ -10,7 +10,7 @@ scene.add(cube);
 camera.position.z = 5;
 
 const canvas =document.querySelector("#canvas")
-const renderer = new THREE.WebGLRenderer({canvas:canvas});
+const renderer = new THREE.WebGLRenderer({canvas:canvas, antialias:true});
 renderer.setSize(window.innerWidth, window.innerHeight);
 
 
@@ -18,7 +18,13 @@ function animate() {
     window.requestAnimationFrame(animate);
     renderer.render(scene, camera);
     cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
+    // cube.rotation.y += 0.01;
 }
 
 animate();
+
+// scene
+// camera
+// mesh - geometry and material
+// renderer
+// request animation frame
